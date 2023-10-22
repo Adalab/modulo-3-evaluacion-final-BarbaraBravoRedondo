@@ -2,6 +2,7 @@ import MovieSceneItem from './MovieSceneItem';
 
 function MovieSceneList({ info }) {
   console.log(info);
+  
 const renderMovies = info.map((movie,index) => {
   return (
     <li  key={index}>
