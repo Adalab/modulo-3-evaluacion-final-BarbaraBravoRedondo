@@ -1,10 +1,10 @@
-
-
+import '../styles/layouts/Header.scss';
+import wow from '../images/wow-title.png';
 function Header() {
   return (
-    <div>
-      <h1>Owen Wilson's "Wow"</h1>
-    </div>
+    <header  className="header">
+      <h1><img className="imgTitle"src={wow} alt="" /></h1>
+    </header>
   )
 }
 

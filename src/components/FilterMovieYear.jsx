@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/layouts/Filters.scss';
 
 function FilterMovieYear({year, updateSelect, SelectedYears}) {
   const handleChange = (ev) => {
@@ -12,14 +13,14 @@ function FilterMovieYear({year, updateSelect, SelectedYears}) {
     ));
   };
   return (
-    <>
-      <label htmlFor="year">
+    <><div className="searchName">
+      <label htmlFor="year" >
         Year
-        <select name="year" id="year" value={year} onChange={handleChange}>
+        <select  className="boxS" name="year" id="year" value={year} onChange={handleChange}>
           <option value="">All</option>
           {renderYear()}
         </select>
-      </label>
+      </label></div>
     </>
   );
 }

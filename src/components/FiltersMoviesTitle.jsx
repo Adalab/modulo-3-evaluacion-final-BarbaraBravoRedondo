@@ -8,10 +8,11 @@ function FiltersMoviesTitle({info,updateInput,title}) {
 
 
   return (
-    <>
+    <><div className="searchName" >
       
         <label htmlFor="">Movie
           <input 
+          className="boxS"
           type="text" 
           name="movie"
           value={title}
@@ -19,7 +20,7 @@ function FiltersMoviesTitle({info,updateInput,title}) {
           placeholder="Escribe aquí la pelicula.." 
           onChange={handleInput}
           />
-        </label>
+        </label></div>
      
     </>
   );

@@ -1,29 +1,30 @@
 import React from 'react';
-import{Link} from 'react-router-dom';
-import '../styles/layouts/movieItem.scss'
+import { Link } from 'react-router-dom';
+import '../styles/layouts/MovieItem.scss';
 
-
-function MovieSceneItem({movie}) {
+function MovieSceneItem({ movie }) {
   return (
     <>
-    <img 
-    className="imgMovie"
-    src={movie.poster}
-    alt="Foto de la pelicula"
-    title={movie.movie}
-    />
-    <div>
-    <span>{movie.movie}</span>
-    <span>{movie.phrase}</span>
-    <span>{movie.director}</span>
-    
-    </div>
-<div>
-  <a href={movie.audio} >Escuchar el audio</a>
-  </div> 
-  
-  </>
-  )
+      {' '}
+      <li className="CardDesc">
+        <Link to={'/movie/:id'}>
+          <article className="article">
+            <img
+              className="imgMovie"
+              src={movie.poster}
+              alt="Foto de la pelicula"
+              title={movie.movie}
+            />
+            <div className="movie-details">
+              <span>{movie.movie}</span>
+              <span>{movie.phrase}</span>
+              <span>{movie.year}</span>
+            </div>
+          </article>
+        </Link>
+      </li>
+    </>
+  );
 }
 
 export default MovieSceneItem;
