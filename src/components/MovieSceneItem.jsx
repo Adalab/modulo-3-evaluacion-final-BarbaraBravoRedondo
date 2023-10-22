@@ -5,8 +5,7 @@ import '../styles/layouts/MovieItem.scss';
 function MovieSceneItem({ movie }) {
   return (
     <>
-      {' '}
-      <li className="CardDesc">
+      <div className="CardDesc">
         <Link to={'/movie/:id'}>
           <article className="article">
             <img
@@ -22,7 +21,7 @@ function MovieSceneItem({ movie }) {
             </div>
           </article>
         </Link>
-      </li>
+      </div>
     </>
   );
 }

@@ -1,6 +1,6 @@
-import { Route, Routes , Link} from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
+import { useLocation, matchPath } from 'react-router';
 
 import callToApi from '../services/api';
 import ls from '../services/localstorage';
@@ -17,7 +17,7 @@ function App() {
   const [moviesInfo, setMoviesInfo] = useState(ls.get('movies', []));
   const [year, setYear] = useState('');
   const [title, setTitle] = useState('');
-console.log(moviesInfo)
+  console.log(moviesInfo);
   useEffect(() => {
     if (ls.get('movies', null) === null) {
       callToApi().then((result) => {
@@ -35,13 +35,7 @@ console.log(moviesInfo)
     justArray.sort((a, b) => a - b);
     return justArray;
   };
-  // const getMovies = () => {n
 
-  //   const movieNames = moviesInfo.map((movie) => movie.movie);
-  //   const justMovie = new Set(movieNames);
-  //   const justMovieList = [...justMovie];
-  //   return justMovieList;
-  // };
   const updateInput = (value) => {
     setTitle(value);
   };
@@ -61,12 +55,14 @@ console.log(moviesInfo)
         return eachYear.year === parseInt(year);
       }
     });
+  const { pathname } = useLocation();
+  const routeData = matchPath('/movie/:id', pathname);
+  const movieId = routeData !== null ? routeData.params.id : '';
+  const movieChoosed = moviesInfo.find((movie) => movie.id === movieId);
 
-   
- 
-
-
-
+  console.log('URL:', pathname);
+  console.log('Movie ID from URL:', movieId);
+  console.log('Movie:', movieChoosed);
 
   return (
     <>
@@ -96,7 +92,7 @@ console.log(moviesInfo)
           />
           <Route
             path="/movie/:id"
-            element={<><MovieSceneDetail  info={moviesInfo}  /><Link to="/">Volver a principal</Link> </>}
+            element={<MovieSceneDetail movieChoosed={movieChoosed} />}
           />
         </Routes>
       </main>

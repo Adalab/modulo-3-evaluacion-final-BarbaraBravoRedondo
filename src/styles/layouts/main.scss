@@ -1,7 +1,12 @@
 //general styles 
 // COMMON STYLES
 @import '../core/reset.scss';
-.main{background-color: black;}
+.main{background-color: black;
+height: 90vh;
+color: white;
+display: flex;
+flex-direction: column;
+}
 .form{
     display: flex;
     justify-content: center;
