@@ -14,17 +14,18 @@ function MovieSceneDetail({ movieChoosed }) {
   return (
     <>
       <article className="detailsBox">
-        <div>
-          <img src={movieChoosed.poster} />
-        </div>
+     
+          <img className="img" src={movieChoosed.poster} />
+  
         <div className="miniData">
           <h2>{movieChoosed.movie}</h2>
           <p>{movieChoosed.phrase}</p>
           <span>Director: {movieChoosed.director}</span>
-          <a href={movieChoosed.audio}>Escuchar audio</a>
-        </div>
+          <a className='a' href={movieChoosed.audio}>Escuchar audio</a>
+        <Link to="/"  className="link">Volver a principal</Link></div>
+        
       </article>
-      <Link to="/">Volver a principal</Link>
+     
     </>
   );
 }

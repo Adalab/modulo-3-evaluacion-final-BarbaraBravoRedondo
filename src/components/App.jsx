@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useLocation, matchPath } from 'react-router';
 
@@ -10,9 +10,9 @@ import Header from './Header';
 import FiltersMoviesTitle from './FiltersMoviesTitle';
 import FilterMovieYear from './FilterMovieYear';
 import MovieSceneList from './MovieSceneList';
-import MovieSceneItem from './MovieSceneItem';
 import MovieSceneDetail from './MovieSceneDetail';
 
+//Api
 function App() {
   const [moviesInfo, setMoviesInfo] = useState(ls.get('movies', []));
   const [year, setYear] = useState('');
@@ -27,6 +27,7 @@ function App() {
     }
   }, []);
 
+  //Obtencion de años sin que esten duplicados, como valor unico cada uno
   const getYears = () => {
     const years = moviesInfo.map((year) => year.year);
     //just the years on the array
@@ -36,16 +37,23 @@ function App() {
     return justArray;
   };
 
+  //Actualizar el valor de input y select
   const updateInput = (value) => {
     setTitle(value);
+    ls.set('title', value);
   };
 
   const updateSelect = (value) => {
     setYear(value);
+    ls.set('year', value);
   };
+
+  //form Submit
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+
+  //Filtrados
   const filteredList = moviesInfo
     .filter((name) => name.movie.toLowerCase().includes(title.toLowerCase()))
     .filter((eachYear) => {
@@ -55,14 +63,12 @@ function App() {
         return eachYear.year === parseInt(year);
       }
     });
+
+  //Ruta ID
   const { pathname } = useLocation();
   const routeData = matchPath('/movie/:id', pathname);
   const movieId = routeData !== null ? routeData.params.id : '';
   const movieChoosed = moviesInfo.find((movie) => movie.id === movieId);
-
-  console.log('URL:', pathname);
-  console.log('Movie ID from URL:', movieId);
-  console.log('Movie:', movieChoosed);
 
   return (
     <>

@@ -1,16 +1,35 @@
-.detailsBox{
-    
-    height: 90vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-background-color: rgb(207, 71, 34);
-    color:white;
+.detailsBox {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(207, 71, 34);
+  color: white;
+  .img {
+    width: 100px;
+    height: 150px;
+    border-radius: 20px 20px 20px 20px;
+  }
 }
-.miniData{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.miniData {
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Permanent Marker', cursive;
+  gap: 5px;
+
+  .a {
+    color: black;
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: white solid 1px;
+  }
+  .link {
+    color: white;
+  }
 }
