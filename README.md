@@ -1,8 +1,44 @@
-# React + Vite
+# OWEN WILSON'S "WOW"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introducción
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Bienvenidos al buscador de WoW'S de Owen Wilson , este buscador te proporciona todos los detalles de cuando y como utiliza WoW en sus diferentes peliculas, proporcionando el titulo de la pelicula, poster, año de la pelicula, director, y hasta el audio.
+
+Web: http://beta.adalab.es/modulo-3-evaluacion-final-BarbaraBravoRedondo/
+
+## Recomendado
+
+- Git (para clonar el repositorio)
+- Navegador Google Chrome o Mozilla Firefox
+
+
+### Requerimientos
+
+- Clonar el repositorio
+- Node.js
+- Navegador web moderno
+
+## Empieza:
+-Clona este repositorio : https://github.com/Adalab/modulo-3-evaluacion-final-BarbaraBravoRedondo.git
+-Instala starter Kit adalab de React
+
+
+
+
+## Instalación
+-Starter Kit
+-npm install
+-npm run dev
+-npm i gh-pages -D
+-npm run build
+-npm run deploy
+
+
+
+---
+
+
+¡Gracias por utilizar mi proyecto!
+
