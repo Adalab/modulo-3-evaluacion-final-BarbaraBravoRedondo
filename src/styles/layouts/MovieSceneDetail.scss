@@ -1,13 +1,14 @@
 .detailsBox {
-  height: 60vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-
+border-top: black 30px solid;;
   background-color: rgb(207, 71, 34);
   color: white;
+  padding: 20px;;
   .img {
     width: 150px;
     height: 180px;
@@ -27,18 +28,29 @@
   align-items: center;
   font-family: 'Permanent Marker', cursive;
   gap: 5px;
-  font-size: 12px;
+  font-size: 16px;
+  text-align: center;
   @media (min-width: 768px) {
     font-size: 18px;
   }
+  @media (min-width: 1024px){
+
+  }
 
   .a {
+    width: 150px;
+    height: 20px;
     color: black;
     margin-top: 10px;
     padding: 5px;
-    border-bottom: white solid 1px;
+   
+    
   }
   .link {
+    margin-top:50px;
     color: white;
+    text-decoration: none;
+   display: flex;
+   flex-direction: column;
   }
 }
