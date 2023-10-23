@@ -10,9 +10,9 @@ function FiltersMoviesTitle({info,updateInput,title}) {
   return (
     <><div className="searchName" >
       
-        <label htmlFor="">Movie
+        <label className="label" htmlFor="">Movie
           <input 
-          className="boxS"
+          className="boxI"
           type="text" 
           name="movie"
           value={title}

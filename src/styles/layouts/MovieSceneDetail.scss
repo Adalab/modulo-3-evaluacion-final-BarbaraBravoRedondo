@@ -1,16 +1,21 @@
 .detailsBox {
-  height: 75vh;
+  height: 60vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  align-items: center;
+
   background-color: rgb(207, 71, 34);
   color: white;
   .img {
-    width: 100px;
-    height: 150px;
+    width: 150px;
+    height: 180px;
     border-radius: 20px 20px 20px 20px;
+    @media (min-width: 768px) {
+      width:210px;
+      height: 230px;
+    }
   }
 }
 
@@ -22,6 +27,10 @@
   align-items: center;
   font-family: 'Permanent Marker', cursive;
   gap: 5px;
+  font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 
   .a {
     color: black;

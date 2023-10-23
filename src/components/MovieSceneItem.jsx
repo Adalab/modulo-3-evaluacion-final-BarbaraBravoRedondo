@@ -6,7 +6,7 @@ function MovieSceneItem({ movie }) {
   return (
     <>
       <div className="CardDesc">
-        <Link to={`/movie/${movie.id}`}>
+        <Link  className="movie-details"to={`/movie/${movie.id}`}>
           <article className="article">
             <img
               className="imgMovie"
@@ -15,9 +15,9 @@ function MovieSceneItem({ movie }) {
               title={movie.movie}
             />
             <div className="movie-details">
-              <span>{movie.movie}</span>
-              <span>{movie.phrase}</span>
-              <span>{movie.year}</span>
+              <span className="span">{movie.movie}</span>
+              <span className="span">{movie.phrase}</span>
+              <span className="span">{movie.year}</span>
             </div>
           </article>
         </Link>

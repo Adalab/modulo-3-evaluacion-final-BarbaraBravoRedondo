@@ -1,62 +1,65 @@
 /* MovieItem.scss */
 .movie-item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-    list-style: none; 
-    margin: 10px;
-    border: 1px solid #ccc; 
-    background: black 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+  width: 100vw;
+  border: 1px solid #ccc;
+  background: black;
 }
 
 
-  
-  .CardDesc {
-        text-decoration: none;
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-  gap:10px;
-    text-decoration: none;
+.imgMovie {
+  width: 50px;
+  height: 60px;
+  display: block;
+  margin: 5px;
+  border-color: white solid 7px;
+  @media (min-width: 768px){
+    width:100px;
+    height: 150px;
+    margin:10px;
   }
-  
-  .imgMovie {
-    width: 150px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; }
-  
-  .movie-details {
-    padding: 12px;;
-    gap:3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .article {
-    display: flex;
-    gap:10px;
-    width: 200px;
-    padding: 10px;;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center; 
-    text-decoration: none;
-    border: 6px solid red; 
-  }
+}
 
-  span{
-    font-family: 'Permanent Marker', cursive;
-    ;
+.movie-details {
+  padding: 8px;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.article {
+  display: flex;
+  gap: 3px;
+  width: 100px;
+  height: max-content;
+  padding: 10px;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+
+  border: 6px solid red;
+  @media (min-width: 768px){
+    width:150px;
+    
+  }
+}
+
+.span {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 6px;
+  color: white;
+  text-decoration: none;
+  @media (min-width: 768px){
     font-size: 12px;
-    color: white;}
-  
+  }
+}
