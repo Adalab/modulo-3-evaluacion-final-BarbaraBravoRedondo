@@ -7,8 +7,7 @@ const callToApi = () => {
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((data) => {
-        //const id = uuidv4();
-        // console.log(`Generated ID: ${id}`);
+    
         return {
           poster: data.poster,
           movie: data.movie,
@@ -19,6 +18,7 @@ const callToApi = () => {
           id: uuid(),
         };
       });
+      
       return cleanData;
     });
 };

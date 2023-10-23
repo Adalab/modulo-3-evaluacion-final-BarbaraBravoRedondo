@@ -3,10 +3,15 @@ import '../styles/layouts/movieItem.scss';
 
 function MovieSceneList({ info, title }) {
   console.log(info);
-  if (info.length === 0) {
-    return <p>No encontramos ningun resultado con `' {title} '` </p>;
+  
+  // Ordenamos los datos alfabeticamente
+  const sortedInfo = [...info].sort((a, b) => a.movie.localeCompare(b.movie));
+  
+  if (sortedInfo.length === 0) {
+    return <p>No encontramos ningún resultado con '{title}'</p>;
   }
-  const renderMovies = info.map((movie, index) => {
+
+  const renderMovies = sortedInfo.map((movie, index) => {
     return (
       <li key={index}>
         <MovieSceneItem movie={movie} />
