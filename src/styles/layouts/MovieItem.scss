@@ -5,11 +5,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100vw;
   border: 1px solid #ccc;
   background: black;
 }
-
 
 .imgMovie {
   width: 50px;
@@ -17,10 +15,14 @@
   display: block;
   margin: 5px;
   border-color: white solid 7px;
-  @media (min-width: 768px){
-    width:100px;
+  @media (min-width: 768px) {
+    width: 100px;
     height: 150px;
-    margin:10px;
+    margin: 10px;
+  }
+  @media (min-width: 1024px) {
+    width: 150px;
+    height: 200px;
   }
 }
 
@@ -46,10 +48,12 @@
   justify-content: center;
   align-items: center;
 
-  border: 6px solid red;
-  @media (min-width: 768px){
-    width:150px;
-    
+  border: 6px solid rgb(207, 71, 34);
+  @media (min-width: 768px) {
+    width: 150px;
+  }
+  @media (min-width: 1024px) {
+    width: 280px;
   }
 }
 
@@ -58,7 +62,27 @@
   font-size: 6px;
   color: white;
   text-decoration: none;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 12px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+.error {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  margin: 25px;
+  @media (min-width: 768px) {
+    font-size: 25px;
+    line-height: 70px;
+  }
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 100px;
   }
 }

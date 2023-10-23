@@ -7,12 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-repeat:repeat;
-  font-family: 'Alfa Slab One', serif;
+  background-repeat: repeat;
   font-size: 28px;
   @media (min-width: 768px) {
     height: 28vh;
-    background-repeat:repeat-x;
+    background-repeat: repeat-x;
+  }
+  @media (min-width: 1024px) {
+    height: 40vh;
   }
 }
 .imgTitle {
@@ -21,7 +23,10 @@
   border-color: black solid 5px;
   background: rgb(228, 80, 21);
   width: 250px;
-  @media (min-width: 768px){
-    width:300px
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+  @media (min-width: 1024px) {
+    width: 600px;
   }
 }

@@ -28,12 +28,12 @@ Web: http://beta.adalab.es/modulo-3-evaluacion-final-BarbaraBravoRedondo/
 
 
 ## Instalación
--Starter Kit
--npm install
--npm run dev
--npm i gh-pages -D
--npm run build
--npm run deploy
+- Starter Kit
+- npm install
+- npm run dev
+- npm i gh-pages -D
+- npm run build
+- npm run deploy
 
 
 

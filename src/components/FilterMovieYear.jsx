@@ -13,7 +13,7 @@ function FilterMovieYear({year, updateSelect, SelectedYears}) {
     ));
   };
   return (
-    <><div className="searchNameS" >
+    <><div className="searchYears" >
       <label htmlFor="year" className="label">
         Year
         <select  className="boxS" name="year" id="year" value={year} onChange={handleChange}>

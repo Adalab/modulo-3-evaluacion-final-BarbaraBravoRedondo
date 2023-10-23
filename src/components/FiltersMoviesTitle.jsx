@@ -17,7 +17,7 @@ function FiltersMoviesTitle({info,updateInput,title}) {
           name="movie"
           value={title}
           id=""
-          placeholder="Escribe aquí la pelicula.." 
+          placeholder="Movie Title..." 
           onChange={handleInput}
           />
         </label></div>

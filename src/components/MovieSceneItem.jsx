@@ -15,7 +15,7 @@ function MovieSceneItem({ movie }) {
               title={movie.movie}
             />
             <div className="movie-details">
-              <span className="span">{movie.movie}</span>
+              <span className="span">-{movie.movie}-</span>
               <span className="span">{movie.phrase}</span>
               <span className="span">{movie.year}</span>
             </div>
