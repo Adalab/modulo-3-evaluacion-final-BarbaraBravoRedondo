@@ -1,12 +1,12 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../styles/layouts/MovieItem.scss';
 
 function MovieSceneItem({ movie }) {
   return (
     <>
       <div className="CardDesc">
-        <Link  className="movie-details"to={`/movie/${movie.id}`}>
+        <Link className="movie-details" to={`/movie/${movie.id}`}>
           <article className="article">
             <img
               className="imgMovie"
@@ -25,5 +25,13 @@ function MovieSceneItem({ movie }) {
     </>
   );
 }
-
+MovieSceneItem.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    movie: PropTypes.string.isRequired,
+    phrase: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+  }).isRequired,
+};
 export default MovieSceneItem;

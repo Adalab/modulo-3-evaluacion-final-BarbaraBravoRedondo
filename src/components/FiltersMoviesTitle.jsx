@@ -1,29 +1,32 @@
-function FiltersMoviesTitle({info,updateInput,title}) {
+import PropTypes from 'prop-types';
+import '../styles/layouts/Filters.scss';
 
-  
-  const handleInput=(ev)=>{
- updateInput(ev.target.value)
-  }
-
-
+function FiltersMoviesTitle({ updateInput, title }) {
+  const handleInput = (ev) => {
+    updateInput(ev.target.value);
+  };
 
   return (
-    <><div className="searchName" >
-      
-        <label className="label" htmlFor="">Movie
-          <input 
-          className="boxI"
-          type="text" 
-          name="movie"
-          value={title}
-          id=""
-          placeholder="Movie Title..." 
-          onChange={handleInput}
+    <>
+      <div className="searchName">
+        <label className="label" htmlFor="">
+          Movie
+          <input
+            className="boxI"
+            type="text"
+            name="movie"
+            value={title}
+            id=""
+            placeholder="Movie Title..."
+            onChange={handleInput}
           />
-        </label></div>
-     
+        </label>
+      </div>
     </>
   );
 }
-
+FiltersMoviesTitle.propTypes = {
+  updateInput: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+};
 export default FiltersMoviesTitle;

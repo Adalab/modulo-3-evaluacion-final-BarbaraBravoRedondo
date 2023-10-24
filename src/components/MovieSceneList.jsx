@@ -2,7 +2,7 @@ import MovieSceneItem from './MovieSceneItem';
 import '../styles/layouts/movieItem.scss';
 
 function MovieSceneList({ info, title }) {
-  console.log(info);
+
 
   // Ordenamos los datos alfabeticamente
   const sortedInfo = [...info].sort((a, b) => a.movie.localeCompare(b.movie));

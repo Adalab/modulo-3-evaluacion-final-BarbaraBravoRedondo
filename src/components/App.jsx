@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useLocation, matchPath } from 'react-router';
+import PropTypes from 'prop-types';
 
 import callToApi from '../services/api';
 import ls from '../services/localstorage';
@@ -17,7 +18,7 @@ function App() {
   const [moviesInfo, setMoviesInfo] = useState(ls.get('movies', []));
   const [year, setYear] = useState('');
   const [title, setTitle] = useState('');
-  console.log(moviesInfo);
+
   useEffect(() => {
     if (ls.get('movies', null) === null) {
       callToApi().then((result) => {
@@ -70,6 +71,11 @@ function App() {
   const movieId = routeData !== null ? routeData.params.id : '';
   const movieChoosed = moviesInfo.find((movie) => movie.id === movieId);
 
+  //NotFound
+  const notFound =
+    !movieChoosed &&
+    !ls.get('movies', []).some((movie) => movie.id === movieId);
+
   return (
     <>
       <Header />
@@ -98,12 +104,22 @@ function App() {
           />
           <Route
             path="/movie/:id"
-            element={<MovieSceneDetail movieChoosed={movieChoosed} />}
+            element={
+              <MovieSceneDetail
+                movieChoosed={movieChoosed}
+                notFound={notFound}
+              />
+            }
           />
         </Routes>
       </main>
     </>
   );
 }
+FilterMovieYear.propTypes = {
+  year: PropTypes.string.isRequired,
+  updateSelect: PropTypes.func.isRequired,
+  SelectedYears: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 
 export default App;
