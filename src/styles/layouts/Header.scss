@@ -22,7 +22,7 @@
 }
 
 .header::before {
-  content: "Owen Wilson's WOW"; /* Reemplaza con la frase que desees */
+  content: "Owen Wilson's WOW"; 
   position: absolute;
   top: 0;
   left: 0;
@@ -32,8 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px; /* Tamaño del texto de la frase detrás del header */
-  color: white; /* Color del texto de la frase */
+  font-size: 50px; 
+  color: white; 
   text-shadow: 5px 5px 10px #e95612;
   font-family: 'Permanent Marker', cursive;
   text-align: center;

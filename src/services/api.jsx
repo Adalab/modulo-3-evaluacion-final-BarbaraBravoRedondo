@@ -7,7 +7,6 @@ const callToApi = () => {
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((data) => {
-    
         return {
           poster: data.poster,
           movie: data.movie,
@@ -18,7 +17,7 @@ const callToApi = () => {
           id: uuid(),
         };
       });
-      
+
       return cleanData;
     });
 };
