@@ -4,7 +4,7 @@
   height: 25vh;
   background-image: url('../../images/wow.png');
   background-position: top;
-  background-size: 19%;
+  background-size: 100px;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
   font-family: 'Permanent Marker', cursive;
   text-align: center;
   @media (min-width: 768px) {
-    font-size: 20px;
+   font-size: 80px;
   }
   @media (min-width: 1024px) {
     font-size: 100px;
