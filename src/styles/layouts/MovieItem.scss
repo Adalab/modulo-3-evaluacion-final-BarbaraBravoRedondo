@@ -27,6 +27,10 @@
   }
 }
 
+.movie-item:hover .imgMovie {
+  animation: none;
+}
+
 .movie-details {
   padding: 8px;
   gap: 3px;
@@ -58,7 +62,9 @@
     width: 280px;
   }
 }
-
+.article:hover {
+  background: rgb(207, 71, 34);
+}
 .span {
   font-family: 'Permanent Marker', cursive;
   font-size: 6px;
